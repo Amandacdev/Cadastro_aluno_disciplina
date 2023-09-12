@@ -1,2 +1,2 @@
-# Cadastro_aluno_disciplina
-Sistema de c adastro de aluns e disciplinas
+# Cadastro de Alunos e  Disciplinas
+Sistema de cadastro de alunos e disciplinas
