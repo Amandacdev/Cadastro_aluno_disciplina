@@ -1,0 +1,17 @@
+  #bloco {
+      display: grid;
+      justify-content: center;
+      margin: 10% 30%;
+      background-color: gainsboro;
+      border-radius: 30px;
+      padding: 40px;
+  }
+  
+  button a {
+      text-decoration: none;
+      color: black;
+  }
+  
+  button {
+      position: center;
+  }

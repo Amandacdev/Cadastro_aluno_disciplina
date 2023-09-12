@@ -4,35 +4,24 @@ class AlunoService {
     }
 
     inserir(nome, idade, matricula) {
-        if (idade < 18) {
-            window.alert("Não é possível inserir menores de idade.")
-            return null;
-        }
-        const alunoPesquisado = this.pesquisarPorMatricula(matricula);
-        if (alunoPesquisado.length > 0) {
-            window.alert('Aluno já cadastrado(a).');
-        }
-        const alunoNovo = new Aluno(nome, idade, matricula);
-        this.repositorio.inserir(alunoNovo);
-        return alunoNovo;
 
-
-
-
-
-/*
-        const alunoPesquisado = this.pesquisarPorMatricula(matricula);
-        if (alunoPesquisado.length > 0) {
-            throw new Error('Aluno já cadastrado!');
+        if (idade == '' || idade == '' || matricula == '') {
+            window.alert('Preencha os campos.');
+        } else {
+            if (idade < 18) {
+                window.alert("Não é possível inserir menores de idade.")
+                return null;
+            }
+            const alunoPesquisado = this.pesquisarPorMatricula(matricula);
+            if (alunoPesquisado.length > 0) {
+                window.alert('Aluno já cadastrado(a).');
+            } else {
+                const alunoNovo = new Aluno(nome, idade, matricula);
+                this.repositorio.inserir(alunoNovo);
+                return alunoNovo;
+            }
         }
 
-        if(idade<18){
-            throw new Error('Alunos menores de idade não são autorizados');
-        }
-
-        const alunoNovo = new Aluno(nome, idade, matricula);
-        this.repositorio.inserir(alunoNovo);
-        return alunoNovo;*/
     }
 
     pesquisarPorMatricula(matricula) {
